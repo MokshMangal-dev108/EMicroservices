@@ -56,15 +56,22 @@ To run this project, ensure you have the following installed:
 3. Configure the database settings in application.properties or application.yml for each service as needed.
 
 ### 2. **Running Services with Docker**
+1. Build the Docker images:
+  Navigate to the root directory of your project and build the Docker images for each service:
+  ```bash
+  docker build -t order-service ./order-service
+  docker build -t product-service ./product-service
+  docker build -t inventory-service ./inventory-service
+  docker build -t notification-service ./notification-service
 
-#### **Build the Docker images**:
-Navigate to the root directory of your project and build the Docker images for each service:
+2. Run the containers:
+  Run the Docker containers for each service with the following commands:
+  ```bash
+  docker run -d -p 8081:8081 --name order-service order-service
+  docker run -d -p 8082:8082 --name product-service product-service
+  docker run -d -p 8083:8083 --name inventory-service inventory-service
+  docker run -d -p 8084:8084 --name notification-service notification-service
 
-```bash
-docker build -t order-service ./order-service
-docker build -t product-service ./product-service
-docker build -t inventory-service ./inventory-service
-docker build -t notification-service ./notification-service
 
 
 
