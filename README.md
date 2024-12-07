@@ -72,6 +72,11 @@ To run this project, ensure you have the following installed:
   docker run -d -p 8083:8083 --name inventory-service inventory-service
   docker run -d -p 8084:8084 --name notification-service notification-service
 
+#### **Start the API Gateway**:
+If the API gateway has been containerized, you can start it using the following command:
+
+```bash
+docker run -d -p 8080:8080 --name api-gateway api-gateway
 
 
 
